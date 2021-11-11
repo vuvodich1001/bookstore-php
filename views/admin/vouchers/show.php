@@ -1,10 +1,11 @@
 <?php $this->view('partitions.admin.header'); ?>
 
-<div class="action">
-    <h2>Voucher</h2>
-    <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Voucher</button>
-</div>
+
 <div class="content">
+    <div class="action">
+        <h2>Voucher</h2>
+        <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Voucher</button>
+    </div>
     <h1>List Vouchers</h1>
     <table>
         <thead>

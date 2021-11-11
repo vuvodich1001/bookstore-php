@@ -57,13 +57,10 @@ function fetchDataBook(type, data = {}, id) {
                 return `
                 <tr>
                     <td>${book.book_id}</td>
+                    <td><img src="../public/admin/uploads/${book.main_image}" alt=""></td>
                     <td>${book.title}</td>
                     <td>${book.author}</td>
                     <td>${book.price}</td>
-                    <td><img src="../public/admin/uploads/${book.main_image}" alt=""></td>
-                    <td>
-                        <div>${book.description}</div>
-                    </td>
                     <td>${book.publish_date.toLocaleString()}</td>
                     <td>${book.publisher}</td>
                     <td>${book.page} x ${book.width} x ${book.height}</td>

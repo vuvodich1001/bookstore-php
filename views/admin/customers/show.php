@@ -1,10 +1,11 @@
 <?php $this->view('partitions.admin.header'); ?>
 
-<div class="action">
-    <h2>Customer</h2>
-    <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Customer</button>
-</div>
+
 <div class="content">
+    <div class="action">
+        <h2>Customer</h2>
+        <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Customer</button>
+    </div>
     <h1>List Customers</h1>
     <table>
         <thead>
@@ -13,7 +14,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Gender</th>
-            <th>register_date</th>
+            <th>Register Date</th>
             <th>Action</th>
         </thead>
         <tbody class="content-body">

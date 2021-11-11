@@ -1,18 +1,41 @@
-:root {
+:root{
   --white-color: #fff;
-  --main-color: #ea4c89;
-  --siderbar-color: #021056;
+  --black-color: #000;
+  --text-color: #333;
+  --background-color: #101829;
+  --primary-color: #11e1c2;
 }
 
-* {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
+body{
+  overflow-x: hidden;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.btn{
+  position: relative;
+  padding: 8px 12px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
 
 .modal {
   display: none;
@@ -38,20 +61,15 @@ html {
 }
 .modal-body {
   margin: auto;
-  /* width: 400px; */
-  width: 400px;
+  min-width: 400px;
   padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
   background-color: var(--white-color);
+  border-radius: 10px;
   position: relative;
-  top: -200px;
+  top: -100px;
   animation: slideFromTop ease-in 0.2s;
 }
 
-.modal-body.modal-book {
-  width: 750px;
-}
 @keyframes slideFromTop {
   from {
     opacity: 0;
@@ -80,6 +98,3 @@ html {
   color: red;
 }
 
-.row {
-  margin-right: 0;
-}

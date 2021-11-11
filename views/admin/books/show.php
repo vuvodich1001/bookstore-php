@@ -1,23 +1,23 @@
 <?php $this->view('partitions.admin.header'); ?>
 
-<div class="action">
-    <h2>Book</h2>
-    <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Book</button>
-</div>
+
 <div class="content">
+    <div class="action">
+        <h2>Book</h2>
+        <button class="btn btn-create"><i class="fas fa-plus-circle"></i> Create Book</button>
+    </div>
     <h1>List books</h1>
     <table>
         <thead>
             <th>#</th>
+            <th>Image</th>
             <th>Title</th>
             <th>Author</th>
             <th>Price</th>
-            <th>Image</th>
-            <th>Description</th>
             <th>Publish Date</th>
             <th>Publisher</th>
             <th>Info</th>
-            <th>create_date</th>
+            <th>Create Date</th>
             <th>Action</th>
         </thead>
         <tbody class="content-body">
@@ -26,13 +26,10 @@
             ?>
                 <tr>
                     <td><?php echo $book['book_id'] ?></td>
+                    <td><img src="../public/admin/uploads/<?php echo $book['main_image'] ?>" alt=""></td>
                     <td><?php echo $book['title'] ?></td>
                     <td><?php echo $book['author'] ?></td>
-                    <td><?php echo $book['price'] ?></td>
-                    <td><img src="../public/admin/uploads/<?php echo $book['main_image'] ?>" alt=""></td>
-                    <td>
-                        <div><?php echo $book['description'] ?></div>
-                    </td>
+                    <td><?php echo $book['price'] ?></td>               
                     <td><?php echo date('d/m/Y', strtotime($book['publish_date'])) ?></td>
                     <td><?php echo $book['publisher'] ?></td>
                     <td><?php echo $book['page'] . ' x ' . $book['height'] . ' x ' . $book['width'] ?></td>
@@ -51,7 +48,7 @@
         <form action="admin.php?controller=book&action=createBook" method="POST" id="form-book" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Category: </label>
-                <select name="category" id="#category" class="">
+                <select name="category" id="#category">
                     <?php
 
                     foreach ($categories as $category) {
